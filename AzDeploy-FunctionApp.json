@@ -29,7 +29,7 @@
     "appServicePlanName": "[format('plan-{0}-{1}', parameters('appNamePrefix'), substring(uniqueString(resourceGroup().id, deployment().name), 0, 4))]",
     "appInsightsName": "[format('appi-{0}-{1}', parameters('appNamePrefix'), substring(uniqueString(resourceGroup().id, deployment().name), 0, 4))]",
     "workspaceName": "[format('log-{0}-{1}', parameters('appNamePrefix'), substring(uniqueString(resourceGroup().id, deployment().name), 0, 4))]",
-    "storageAccountName": "[format('st{0}func', uniqueString(resourceGroup().id, deployment().name))]",
+    "storageAccountName": "[format('sto-{0}-{1}', parameters('appNamePrefix'), substring(uniqueString(resourceGroup().id, deployment().name), 0, 4))]",
     "appInsightsEndpoints": {
       "AzureCloud": "applicationinsights.azure.com",
       "AzureChinaCloud": "applicationinsights.azure.cn",
