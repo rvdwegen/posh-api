@@ -138,6 +138,17 @@
         "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]",
         "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
       ]
+    },
+    {
+      "apiVersion": "2015-08-01",
+      "name": "[concat(parameters("[variables('functionAppName')]"),'/',parameters('websiteCustomDomainName'))]",
+      "type": "Microsoft.Web/sites/hostNameBindings",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "domainId": null,
+        "hostNameType": "Verified",
+        "siteName": "parameters('websiteName')"
+      }
     }
   ],
   "outputs": {
