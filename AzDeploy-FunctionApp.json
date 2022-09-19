@@ -125,7 +125,7 @@
             },
             {
               "name": "WEBSITE_RUN_FROM_PACKAGE",
-              "value": ""
+              "value": "https://stacmebotprod.blob.core.windows.net/keyvault-acmebot/v4/latest.zip"
             }
           ],
           "ftpsState": "Disabled",
